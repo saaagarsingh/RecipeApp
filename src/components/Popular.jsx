@@ -9,22 +9,22 @@ export const Popular = () => {
   // parameters inside useState tells what kind of data you have
   useEffect(() => {
     getPopular();
-  }, []);
+  }, [recipeData]);
 
   // useEffect calls the method as soon as the component gets mounted.
   const getPopular = async () => {
-    const check = localStorage.getItem("popular");
-    if (check) {
-      setRecipeData(JSON.parse(check));
-    } else {
+    // const check = localStorage.getItem("popular");
+    // if (check) {
+    //   setRecipeData(JSON.parse(check));
+    // } else {
       const api = await fetch(
         `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
       );
       const data = await api.json();
-      localStorage.setItem("popular", JSON.stringify(data.recipes));
+      // localStorage.setItem("popular", JSON.stringify(data.recipes));
       setRecipeData(data.recipes);
       console.log(recipeData);
-    }
+    
   };
 
   return (

@@ -9,23 +9,23 @@ export const Veggie = () => {
 
   useEffect(() => {
     getVeggie();
-  }, []);
+  }, [veggie]);
 
   const getVeggie = async () => {
-    const check = localStorage.getItem("veggies");
+    // const check = localStorage.getItem("veggies");
 
-    if (check) {
-      setVeggie(JSON.parse(check));
-    } else {
+    // if (check) {
+    //   setVeggie(JSON.parse(check));
+    // } else {
       const api = await fetch(
         `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
       );
       const data = await api.json();
 
-      localStorage.setItem("veggies", JSON.stringify(data.recipes));
+      // localStorage.setItem("veggies", JSON.stringify(data.recipes));
       setVeggie(data.recipes);
       console.log(data.recipes);
-    }
+   
   };
 
   return (
