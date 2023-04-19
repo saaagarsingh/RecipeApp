@@ -40,7 +40,7 @@ export const Popular = () => {
             gap: "5rem",
           }}
         >
-          {recipeData.map((recipe) => {
+          {recipeData?.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>

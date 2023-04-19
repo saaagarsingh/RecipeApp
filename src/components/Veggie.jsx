@@ -43,7 +43,7 @@ export const Veggie = () => {
             type: "loop",
           }}
         >
-          {veggie.map((recipe) => {
+          {veggie?.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
