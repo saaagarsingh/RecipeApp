@@ -2,7 +2,7 @@
   "name": "recipeapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://saaagarsingh.gihub.io/RecipeApp/",
+  "homepage": "http://saaagarsingh.gihub.io",
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
     "@testing-library/jest-dom": "^5.16.5",
